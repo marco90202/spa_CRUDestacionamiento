@@ -1,0 +1,316 @@
+/* Para el login */
+
+body{
+  margin: 0px;
+  padding: 0px;
+  /* background-color: aquamarine; */
+}
+.login-container{
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+.bg-login{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/bg-new-login.jpg); /* ok */
+  background-size: cover;   
+  background-position: center center;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  background-color: #000000;
+}
+.cont-data-photographer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #ffffff;
+  display: block;
+  font-size: 22px;
+  margin-right: 60px;
+  margin-bottom: 30px;
+  text-align: right;
+  font-weight: 200;
+  text-shadow: 2px 2px 3px #4c4c4c;
+}
+.cont-data-photographer strong{
+  font-style: italic;
+  font-weight: 400;
+}
+.logo-container-login ul{
+  list-style: none;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.logo-container-login ul li{
+  width: auto;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+  /* margin-bottom: 180px; */
+  margin-bottom: 90px;
+}
+.logo-container-login ul li img{
+  height: 100%;
+}
+.new-padding-login{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.text-intro-login{
+  font-size: 18px;
+}
+.form-control{
+  height: 49px;
+}
+.text-reportar{
+  margin-top: 300px;
+}
+/* .btn{
+  height: 49px;
+} */
+.btn-link-a{
+  padding-top: 10px;
+}
+.btn-primary{
+  background-color: #5E72E4 !important;
+}
+
+/* Para el tema del tablero */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?13zg1c');
+  src:  url('../fonts/icomoon.eot?13zg1c#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?13zg1c') format('truetype'),
+    url('../fonts/icomoon.woff?13zg1c') format('woff'),
+    url('../fonts/icomoon.svg?13zg1c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-usil-circular .path1:before {
+  content: "\e901";
+  color: rgb(0, 31, 106);
+}
+
+.icon-usil-circular .path3:before {
+  content: "\e903";
+  margin-left: -1.0048828125em;
+  color: rgb(0, 31, 106);
+}
+.icon-usil-circular .path4:before {
+  content: "\e904";
+  margin-left: -1.0048828125em;
+  color: rgb(0, 31, 106);
+}
+.icon-usil-circular .path5:before {
+  content: "\e905";
+  margin-left: -1.0048828125em;
+  color: rgb(0, 31, 106);
+}
+.icon-usil-cuadrado:before {
+  content: "\e900";
+}
+
+
+html, body, p, strong, h1, h2,h3,h4,h5,h6 {
+	font-family: 'Roboto', sans-serif;
+}
+.text-primary {
+    color: #5E72E4!important;
+}
+.text-success {
+    color: #2DCE89!important;
+}
+.text-danger {
+    color: #F5365C!important;
+}
+.text-warning {
+    color: #FB6340!important;
+}
+.text-info {
+    color: #11CDEF!important;
+}
+.bg-shadow-fx{
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.06);
+  /* padding: 6px !important; */
+	padding: 5px !important;
+  
+}
+.bell-fx{
+	border: 1px rgba(45, 206, 137, 0.27) solid;
+    border-radius: 50%;
+    padding: 2px 6px !important;
+    background-color: rgba(45, 206, 137, 0.25);
+    color: #2DCE89 !important;
+}
+.mr-top-fx{
+	margin-top: 50px;
+}
+.usil-logo{
+    margin-left: 9px;
+    margin-top: 12px;
+}
+.logo-circular{
+	font-size: 62px;
+    border-radius: 50%;
+}
+.breat-fx{
+	font-size: 18px;
+    font-weight: 400;
+}
+.circle-status{
+	width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 47px;
+    border: 1px #fff solid;
+    margin-left: -18px;
+}
+.online::after{
+	content: 'Online';
+	color: #57CE2D;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: -4px;
+    position: absolute;
+    font-style: normal;
+}
+.offline::after{
+	content: 'Offline';
+	color: #666666;
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: -4px;
+    position: absolute;
+    font-style: normal;
+}
+.offline{
+	background-color: #666666;
+}
+.online{
+	background-color: #57CE2D;
+}
+.logo-online{
+	border: 3px #57CE2D solid;
+}
+.logo-offline{
+	border: 3px #666666 solid;
+}
+.card-padding-fx{
+	padding: 13px;
+}
+.circle-img-mini{
+	border-radius: 50%;
+    float: left;
+    width: 36px;
+}
+.color-primary {
+    border: 2px #5E72E4 solid;
+}
+.color-success {
+    border: 2px #2DCE89 solid;
+}
+.color-danger {
+    border: 2px #F5365C solid;
+}
+.color-warning {
+    border: 2px #FB6340 solid;
+}
+.color-info {
+    border: 2px #11CDEF solid;
+}
+.cut-string{
+    width: 68%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.floatp{
+  margin-top: 6px;
+  margin-left: 4px;
+  float: left;
+}
+.mrt-6{
+  margin-top: 6px;
+}
+.codigo-curso{
+  position: absolute;
+  background-color: #57CE2D;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 3px;
+  top: 7px;
+  left: 7px;
+}
+.paddtop{
+  padding-top: 4px;
+}
+
+@media (max-width:767px) {
+  .login-picture {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
