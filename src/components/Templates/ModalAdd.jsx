@@ -4,24 +4,29 @@ import {post, header, notify} from '../Utils/Helpers'
 
 const Modal = ({resetState, id, title, printInputs, request}) => {
 
-    
+    console.log(printInputs())
 
     const create = e => {
         e.preventDefault()
-
+        
         // const form = e.target
 
         var body = {};
 
         let datos = document.querySelectorAll('#'+id+' input')
-
+        let datos2 = document.querySelectorAll('#'+id+' select')
         datos.forEach(function(row){
+            body[row.name] = row.value;            
+        })
+
+        datos2.forEach(function(row){
             body[row.name] = row.value;            
         })
 
         // Todo Validar tambien que los values respectivos tengan contenido
 
         post(request.endpoint, body, header(), function(code, response) {
+            console.log(body)
             console.log(response.data)
             if(code === 200){                
                 notify(request.successMessage, 'success')

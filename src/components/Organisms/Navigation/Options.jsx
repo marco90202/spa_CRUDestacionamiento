@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 const Options = () => {
 
-    // Se está validando para mostrar las copciones aún cuando no haya login de usuario, para vistas públicas del curso
+    // Se está validando para mostrar las copciones aún cuando no haya login de usuario
     return (
         <>
             <div className="navbar-inner">
@@ -19,7 +19,7 @@ const Options = () => {
                         user()
                         ?
                         <li className="nav-item">
-                            <NavLink className="nav-link" to='/' exact>
+                            <NavLink className="nav-link" to={'/'} exact>
                                 <i className="fa fa-user-o text-info"></i>
                                 <span className="nav-link-text">Clientes</span>
                             </NavLink>
@@ -30,7 +30,7 @@ const Options = () => {
                         user()
                         ?
                         <li className="nav-item">
-                            <NavLink className="nav-link" to='/vehicule' >
+                            <NavLink className="nav-link" to={'/vehicule'} >
                                 <i className="fa fa-car text-info"></i>
                                 <span className="nav-link-text">Vehiculos</span>
                             </NavLink>
@@ -41,7 +41,7 @@ const Options = () => {
                         user()
                         ?
                         <li className="nav-item">
-                            <NavLink className="nav-link" to='/parking' >
+                            <NavLink className="nav-link" to={'/parking'} >
                                 <i className="fa fa-map-marker text-info"></i>
                                 <span className="nav-link-text">Estacionamientos</span>
                             </NavLink>

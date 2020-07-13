@@ -12,7 +12,7 @@ const removeToken = () => {
 }
 
 const printFirstName = () => {
-    return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).names : null
+    return localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).firstname : null
 }
 
 const headerOptions = () => {

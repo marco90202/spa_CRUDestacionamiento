@@ -165,7 +165,7 @@ const ParkingList = ({match}) => {
     }
 
 
-    if (scope.loader) return <p>Cargando...</p>
+    // if (scope.loader) return <p>Cargando...</p>
     if (scope.error) {
         notify(scope.errorMessage, 'error')    
         return <NotFound />
