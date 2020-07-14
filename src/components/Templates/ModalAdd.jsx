@@ -33,7 +33,7 @@ const Modal = ({resetState, id, title, printInputs, request}) => {
                 $('#'+id).modal('hide')
                 resetState()
             }else{
-                notify(response.data.error+request.errorMessage, 'error')
+                notify(response.data.error+' '+request.errorMessage, 'error')
             }
         })
 

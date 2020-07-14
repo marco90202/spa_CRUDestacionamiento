@@ -18,6 +18,7 @@ const VehiculeList = ({match}) => {
         data: null, // 
         error: false,
 
+        clients: [],
         vehiculeToUpdate: null,
         vehiculeToRemove: null
     }
@@ -76,8 +77,8 @@ const VehiculeList = ({match}) => {
             sortable: true
         },
         {
-            name: 'Cliente ID',
-            selector: 'client_id',
+            name: 'Cliente',
+            selector: 'email',
             sortable: true,
             right: true,
             grow: 3
@@ -131,7 +132,8 @@ const VehiculeList = ({match}) => {
                 setScope({
                     ...scope,
                     loader: false,
-                    data: response.data
+                    data: response.data.vehicules,
+                    clients : response.data.clients
                 })
             }else{
                 setScope({
@@ -204,7 +206,7 @@ const VehiculeList = ({match}) => {
                         </div>
 
             </div>
-            <VehiculeAdd resetState={resetState}  />
+            <VehiculeAdd resetState={resetState}  clients={scope.clients}/>
 
             <VehiculeEdit resetState={resetState} vehiculeToUpdate={scope.vehiculeToUpdate}/>
 

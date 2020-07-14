@@ -3,8 +3,8 @@ import ModalAdd from '../../../Templates/ModalAdd'
 import {  get, header } from '../../../Utils/Helpers'
 
 
-const UsersAdd = ({resetState}) => {
-
+const UsersAdd = ({resetState,clients}) => {
+    console.log(clients)
     const [scope, setScope] = useState({
         vehiculesbrands: [],
         error: false,
@@ -119,15 +119,12 @@ const UsersAdd = ({resetState}) => {
                                     className="col-form-label">
                                         {inputsAdd[2].html} { inputsAdd[2].required ? <span className="text-danger" >*</span> : null}
                                 </label>
-                                <input 
-                                    type={inputsAdd[2].type} 
-                                    className="form-control" 
-                                    id={inputsAdd[2].id} 
-                                    name={inputsAdd[2].name} 
-                                    minLength={inputsAdd[2].minLength}                                                 
-                                    maxLength={inputsAdd[2].maxLength} 
-                                    required= { inputsAdd[2].required ? 'required' : null }
-                                />
+                                <select type={inputsAdd[2].type} className="form-control" id={inputsAdd[2].id} name={inputsAdd[2].name}  required>
+                                    <option value="">Seleccione un cliente</option>
+                                    {
+                                        clients.map((p, index) => <option type={inputsAdd[2].type} id={inputsAdd[2].id} name={inputsAdd[2].name} key={index} value={p.email}>{p.email}</option>)
+                                    }
+                                </select> 
                             </div>
                             )
 

@@ -179,7 +179,7 @@ const Login = () => {
                     <div className="bg-login"></div>
                     <div className="overlay"></div>
                     <div className="cont-data-photographer">
-                        <p>Fotografía - <strong>NexoInmoviliario</strong></p>
+                        <p>Fotografía - <strong>Nexo Inmobiliario</strong></p>
                     </div>
                 </div>
             </div>
