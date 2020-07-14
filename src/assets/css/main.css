@@ -84,6 +84,43 @@ body{
   background-color: #5E72E4 !important;
 }
 
+.post_list_content_unit {
+	margin-top: -65px !important;
+    margin-bottom: -10px;
+}
+.post_list_featured_image {
+    margin-bottom: 9px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,.18);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+    display: block;
+    color: #fff !important;
+    position: relative;
+    z-index: 9999;
+}
+.post_list_featured_image:hover {
+    transform: translateY(-10px);
+}
+.nohoverunderline:hover{
+	text-decoration: none;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.container::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
 /* Para el tema del tablero */
 
 @font-face {

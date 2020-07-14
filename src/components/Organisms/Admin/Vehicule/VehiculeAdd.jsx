@@ -31,7 +31,7 @@ const UsersAdd = ({resetState}) => {
             required: true
         },
         {
-            html: 'Cliente ID',
+            html: 'Correo de cliente',
             type: 'text',
             id: 'client_idAdd',
             name: 'client_id',

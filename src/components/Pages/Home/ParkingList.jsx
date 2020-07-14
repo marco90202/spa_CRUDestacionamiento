@@ -176,15 +176,15 @@ const ParkingList = ({match}) => {
         <div className="container-fluid bg-white mt-6">
             <div className="row">
                 <div className="col-12">
-                    <button className="btn btn-usil pull-right"
+                    {/* <button className="btn btn-usil pull-right"
                     data-toggle="modal" 
                     data-target="#modalAdd" 
                     data-backdrop="static" 
                     data-keyboard="false"
                     >
                         <i className="fa fa-plus"></i> Agregar
-                    </button>
-                    <h1>Vehiculos de clientes registrados </h1>
+                    </button> */}
+                    <h1>Estacionamientos registrados </h1>
 
                 </div>
                
@@ -194,6 +194,70 @@ const ParkingList = ({match}) => {
 
                         <div className="col-md-12">
                             
+                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                            <li className="nav-item">
+                                <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inicio</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Relacion</a>
+                            </li>
+                        </ul>
+                        <div className="tab-content" id="myTabContent">
+                        <div className="tab-pane fade show active text-center" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        {
+                            scope.loader ? <p>Cargando...</p> : 
+                            scope.data.map((c, index) =>  <scroll-container>
+                                                            <div key={index} className="row">                                                            
+                                                            <div htmlFor={c.id} className="container mt-7">
+                                                            <label htmlFor={c.id} className="col-form-label"> 
+                                                                </label>    
+                                                            <div htmlFor={c.id} className="col-md-4 col-sm-4 col-xs-3">
+                                                                <div htmlFor={c.id} className="post_list_content_unit">
+                                                                <div htmlFor={c.id} className="post_list_featured_image"> 
+                                                                    <a href="/" >
+                                                                        <div htmlFor={c.id} className="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded">
+                                                                           {c.status === "libre" ? <img width="280" height="250" data-src="https://www.iconsdb.com/icons/preview/guacamole-green/circle-xxl.png" className="img-responsive wp-post-image lazyloaded" alt={c.status} src="https://www.iconsdb.com/icons/preview/guacamole-green/circle-xxl.png" /> : <img width="250" height="250" data-src="https://www.iconsdb.com/icons/preview/soylent-red/circle-xxl.png" className="img-responsive wp-post-image lazyloaded" alt={c.status} src="https://www.iconsdb.com/icons/preview/soylent-red/circle-xxl.png" /> }
+                                                                        </div> 
+                                                                    </a>
+                                                                </div>
+                                                                <div className="row">
+                                                                    <div className="col-md-12">
+                                                                        <div className="post_list_inner_content_unit "> 
+                                                                            <a href="/" className="text-black nohoverunderline text-h3">{c.position}</a>
+                                                                            <div className="text-black text-p-small">
+                                                                                <p>{"Nivel: "+ c.level + " - Estado: " + c.status + " - Vehiculo: " +c.vehicule_id}</p>
+                                                                                <p>{"Fecha inscripción: "+ datemoment(c.created_at)}</p>
+                                                                            </div>
+                                                                            <div className="short_separator"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                                
+                                                            </div>
+                                                            </div>
+                                                            </scroll-container>
+                            )
+                        }
+                        </div>
+                        <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div className="row">
+                <div className="col-12">
+                    <button className="btn btn-usil pull-right"
+                    data-toggle="modal" 
+                    data-target="#modalAdd" 
+                    data-backdrop="static" 
+                    data-keyboard="false"
+                    >
+                        <i className="fa fa-plus"></i> Agregar
+                    </button>
+                    {/* <h1>Estacionamientos registrados </h1> */}
+
+                </div>
+               
+                
+            </div>
                             <div className="table-responsive">
                             <Datatable 
                                 columns = { columnas }
@@ -208,6 +272,8 @@ const ParkingList = ({match}) => {
                                 // onRowClicked = { ({fullname}) => test(fullname)}
                             />
                             </div>
+                        </div>
+                        </div>
                         </div>
 
             </div>
