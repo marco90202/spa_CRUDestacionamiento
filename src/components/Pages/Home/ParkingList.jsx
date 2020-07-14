@@ -11,7 +11,7 @@ import ParkingDelete from '../../Organisms/Admin/Parking/ParkingDelete'
 
 import {CSVLink} from 'react-csv'
 
-const ParkingList = ({match}) => {
+const ParkingList = () => {
 
     const initialState = {
         loader: true,
@@ -151,7 +151,7 @@ const ParkingList = ({match}) => {
         })
 
 
-    }, [scope, match]);
+    }, [scope]);
 
     if(scope.loader) return <Loader height={500}/>
 
@@ -214,11 +214,9 @@ const ParkingList = ({match}) => {
                                                             <div htmlFor={c.id} className="col-md-4 col-sm-4 col-xs-3">
                                                                 <div htmlFor={c.id} className="post_list_content_unit">
                                                                 <div htmlFor={c.id} className="post_list_featured_image"> 
-                                                                    <a href="/" >
                                                                         <div htmlFor={c.id} className="stm_lms_lazy_image stm_lms_lazyloaded stm_lms_lazy_image__lazyloaded">
                                                                            {c.status === "libre" ? <img width="280" height="250" data-src="https://www.iconsdb.com/icons/preview/guacamole-green/circle-xxl.png" className="img-responsive wp-post-image lazyloaded" alt={c.status} src="https://www.iconsdb.com/icons/preview/guacamole-green/circle-xxl.png" /> : <img width="250" height="250" data-src="https://www.iconsdb.com/icons/preview/soylent-red/circle-xxl.png" className="img-responsive wp-post-image lazyloaded" alt={c.status} src="https://www.iconsdb.com/icons/preview/soylent-red/circle-xxl.png" /> }
                                                                         </div> 
-                                                                    </a>
                                                                 </div>
                                                                 <div className="row">
                                                                     <div className="col-md-12">
@@ -281,7 +279,7 @@ const ParkingList = ({match}) => {
 
             <ParkingEdit resetState={resetState} ParkingToUpdate={scope.ParkingToUpdate}/>
 
-            <ParkingDelete resetState={resetState} match={match} ParkingToRemove={scope.ParkingToRemove} />
+            <ParkingDelete resetState={resetState} ParkingToRemove={scope.ParkingToRemove} />
            
         </div>
         
